@@ -4,24 +4,37 @@
  */
 package com.backend.portfolio.Dto;
 
+import java.sql.Blob;
 import javax.validation.constraints.NotBlank;
 
 /**
  *
  * @author Dalmiro Rivero
  */
-public class dtoHabilidades {
+public class dtoPerfil {
+    
+    @NotBlank
+    private String perfil;
     @NotBlank
     private String descripcion;
     @NotBlank
-    private int porcentaje;
+    private Blob img;
 
-    public dtoHabilidades() {
+    public dtoPerfil() {
     }
 
-    public dtoHabilidades(String descripcion, int porcentaje) {
+    public dtoPerfil(String perfil, String descripcion, Blob img) {
+        this.perfil = perfil;
         this.descripcion = descripcion;
-        this.porcentaje = porcentaje;
+        this.img = img;
+    }
+
+    public String getPerfil() {
+        return perfil;
+    }
+
+    public void setPerfil(String perfil) {
+        this.perfil = perfil;
     }
 
     public String getDescripcion() {
@@ -32,12 +45,12 @@ public class dtoHabilidades {
         this.descripcion = descripcion;
     }
 
-    public int getPorcentaje() {
-        return porcentaje;
+    public Blob getImg() {
+        return img;
     }
 
-    public void setPorcentaje(int porcentaje) {
-        this.porcentaje = porcentaje;
+    public void setImg(Blob img) {
+        this.img = img;
     }
     
     
