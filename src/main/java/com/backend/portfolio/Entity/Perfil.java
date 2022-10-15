@@ -4,7 +4,7 @@
  */
 package com.backend.portfolio.Entity;
 
-import java.sql.Blob;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -25,12 +25,12 @@ public class Perfil {
     
     private String descripcion;
     
-    private Blob img;
+    private String img;
 
     public Perfil() {
     }
 
-    public Perfil(String perfil, String descripcion, Blob img) {
+    public Perfil(String perfil, String descripcion, String img) {
         this.perfil = perfil;
         this.descripcion = descripcion;
         this.img = img;
@@ -60,11 +60,11 @@ public class Perfil {
         this.descripcion = descripcion;
     }
 
-    public Blob getImg() {
+    public String getImg() {
         return img;
     }
 
-    public void setImg(Blob img) {
+    public void setImg(String img) {
         this.img = img;
     }
 

@@ -4,7 +4,7 @@
  */
 package com.backend.portfolio.Dto;
 
-import java.sql.Blob;
+
 import javax.validation.constraints.NotBlank;
 
 /**
@@ -18,12 +18,12 @@ public class dtoPerfil {
     @NotBlank
     private String descripcion;
     @NotBlank
-    private Blob img;
+    private String img;
 
     public dtoPerfil() {
     }
 
-    public dtoPerfil(String perfil, String descripcion, Blob img) {
+    public dtoPerfil(String perfil, String descripcion, String img) {
         this.perfil = perfil;
         this.descripcion = descripcion;
         this.img = img;
@@ -45,11 +45,11 @@ public class dtoPerfil {
         this.descripcion = descripcion;
     }
 
-    public Blob getImg() {
+    public String getImg() {
         return img;
     }
 
-    public void setImg(Blob img) {
+    public void setImg(String img) {
         this.img = img;
     }
     
