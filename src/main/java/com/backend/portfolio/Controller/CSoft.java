@@ -30,7 +30,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/shabilidades")
-@CrossOrigin(origins = "https://frontendportfolio-e6cc4.web.app")
+@CrossOrigin(origins = "https://dalmirorivero.com.ar")
 public class CSoft {
     @Autowired
     SSoft sSoft;
