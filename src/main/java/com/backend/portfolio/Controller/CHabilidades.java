@@ -29,7 +29,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/habilidades")
-@CrossOrigin(origins = {"https://dalmirorivero.com.ar" , "https://frontendportfolio-e6cc4.web.app"})
+@CrossOrigin(origins = {"https://dalmirorivero.com.ar" , "https://frontendportfolio-e6cc4.web.app", "http://localhost:4200"})
 public class CHabilidades {
     @Autowired
     SHabilidades sHabilidades;
