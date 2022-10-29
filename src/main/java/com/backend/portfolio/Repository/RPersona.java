@@ -5,15 +5,17 @@
 package com.backend.portfolio.Repository;
 
 import com.backend.portfolio.Entity.Persona;
+import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 /**
  *
- * @author Dalmi
+ * @author Dalmiro Rivero
  */
-
 @Repository
-public interface IPersonaRepository extends JpaRepository <Persona, Long>{
+public interface RPersona extends JpaRepository <Persona, Integer> {
+    public Optional <Persona> findByBio(String bio);
+    public boolean existsByBio (String bio);
     
 }
