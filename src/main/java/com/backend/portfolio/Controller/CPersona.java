@@ -60,4 +60,14 @@ public class CPersona {
       
       return new ResponseEntity(new Mensaje("Campo actualizado con exito!"), HttpStatus.OK);
     }
+    
+    @GetMapping("/detail/{id}")
+    public ResponseEntity<Persona> getById(@PathVariable("id")int id){
+        if(!sPersona.existsById(id)){
+            return new ResponseEntity(new Mensaje("ID Inexistente"), HttpStatus.BAD_REQUEST);
+        }
+        
+        Persona persona = sPersona.getOne(id).get();
+        return new ResponseEntity(persona, HttpStatus.OK);
+    }
 }
